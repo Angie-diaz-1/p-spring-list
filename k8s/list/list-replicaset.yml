@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: list-replicaset
+  namespace: p-spring-list
+  labels:
+    app: list-product
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: list-product
+  template:
+    metadata:
+      labels:
+        app: list-product
+    spec:
+      nodeSelector:
+        workload: list
+      imagePullSecrets:
+        - name: dockerhub-secret
+      containers:
+        - name: list
+          image: angiediazz/p-spring-list:latest
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: maria-list-secret

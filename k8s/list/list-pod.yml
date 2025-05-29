@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: list-pod
+  namespace: p-spring-list
+  labels:
+    app: list-product
+spec:
+  nodeSelector:
+    workload: list
+  imagePullSecrets:
+    - name: dockerhub-secret
+  containers:
+    - name: list-container
+      image: angiediazz/p-spring-list:latest
+      ports:
+        - containerPort: 8080
+      envFrom:
+        - secretRef:
+            name: maria-list-secret

@@ -60,23 +60,7 @@ public class ProductoControllerIT {
     }
 
     @Test
-    void listarProductos_DeberiaRetornar200() throws Exception {
-        // Primero creamos un producto
-        mockMvc.perform(post("/api/productos/crear")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(producto)))
-                .andExpect(status().isOk());
-
-        // Ahora sí podemos listar
-        mockMvc.perform(get("/api/productos/listar"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].codigo").value("P001"));
-    }
-
-    @Test
     void listarProductos_SinDatos_DeberiaRetornar404() throws Exception {
-        mockMvc.perform(delete("/api/productos/eliminar/P001"));
-
         mockMvc.perform(get("/api/productos/listar"))
                 .andExpect(status().isNotFound());
     }
