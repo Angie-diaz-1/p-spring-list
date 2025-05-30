@@ -12,9 +12,9 @@
     </parent>
 
     <groupId>com.eam</groupId>
-    <artifactId>microservicio-spring-mariadb</artifactId>
+    <artifactId>p_spring_list</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>microservicio-spring-mariadb</name>
+    <name>p_spring_list</name>
     <description>Parcial 2 de contenedores</description>
 
     <properties>

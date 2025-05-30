@@ -1,6 +1,6 @@
-package com.eam.microservicio_spring_mariadb.repository;
+package com.eam.p_spring_list.repository;
 
-import com.eam.microservicio_spring_mariadb.entity.Producto;
+import com.eam.p_spring_list.entity.Producto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

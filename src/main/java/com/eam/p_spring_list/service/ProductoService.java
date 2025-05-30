@@ -1,7 +1,7 @@
-package com.eam.microservicio_spring_mariadb.service;
+package com.eam.p_spring_list.service;
 
-import com.eam.microservicio_spring_mariadb.entity.Producto;
-import com.eam.microservicio_spring_mariadb.repository.ProductoRepository;
+import com.eam.p_spring_list.entity.Producto;
+import com.eam.p_spring_list.repository.ProductoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

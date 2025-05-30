@@ -1,13 +1,13 @@
-package com.eam.microservicio_spring_mariadb;
+package com.eam.p_spring_list;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MicroservicioSpringMariadbApplication {
+public class PSpringListApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MicroservicioSpringMariadbApplication.class, args);
+		SpringApplication.run(PSpringListApplication.class, args);
 	}
 
 }
