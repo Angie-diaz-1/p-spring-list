@@ -41,8 +41,9 @@ public class ProductoControllerTest {
         when(productoService.listarProductos()).thenReturn(lista);
 
         mockMvc.perform(get("/api/productos/listar"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].codigo").value("P001"));
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.productos[0].codigo").value("P001"));
+
     }
 
     @Test
